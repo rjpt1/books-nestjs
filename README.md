@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
@@ -100,4 +99,4 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 =======
 # books-nestjs
 backend app testing nestjs for academical reasons and new learning
->>>>>>> 964d410765253560f9452d6c385abfb312fa8d3d
+

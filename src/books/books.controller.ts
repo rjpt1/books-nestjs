@@ -1,13 +1,15 @@
-import { Controller, Get, Post, Delete, Param, Body, Query } from '@nestjs/common';
+import { Controller, Get, Post, Delete, Param, Body, Query, UseGuards } from '@nestjs/common';
 import { BooksService } from './books.service';
 import { CreateBookDto } from './dto/create-book.dto';
 import { Book } from './entities/book.entity';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('books')
 export class BooksController {
   constructor(private readonly booksService: BooksService) {}
 
   @Get()
+  @UseGuards(AuthGuard('jwt'))
   async findAll(): Promise<Book[]> {
     return this.booksService.findAll();
   }
